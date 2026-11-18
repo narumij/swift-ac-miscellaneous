@@ -5,10 +5,10 @@ import PackageDescription
 let package = Package(
   name: "swift-ac-miscellaneous",
   products: [
-    .library(name: "AcMiscellaneous", targets: ["AcMiscellaneous"])
+    .library(name: "Miscellaneous", targets: ["Miscellaneous"])
   ],
   targets: [
-    .target(name: "AcMiscellaneous", dependencies: ["Idioms", "Sugar", "Recipes"]),
+    .target(name: "Miscellaneous", dependencies: ["Idioms", "Sugar", "Recipes"]),
     .target(name: "Recipes"),
     .target(name: "Idioms"),
     .target(name: "Sugar"),
