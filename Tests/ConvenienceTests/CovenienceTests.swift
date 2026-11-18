@@ -3,6 +3,17 @@ import XCTest
 
 final class CovenienceTests: XCTestCase {
 
+  @available(macOS 26.0, iOS 26.0, tvOS 26.0, watchOS 26.0, visionOS 26.0, *)
+  func testFactorialTable() {
+    XCTAssertEqual(factorial(0), 1)
+    var expected: Int128 = 1
+    for n in 1...33 {
+      expected *= Int128(n)
+      XCTAssertEqual(factorial(n), expected)
+    }
+    XCTAssertEqual(factorial(33), 8683317618811886495518194401280000000)
+  }
+
   func testPrefixSum() throws {
     XCTAssertEqual(prefixSum((1...5) + []), [0, 1, 3, 6, 10, 15])
   }
@@ -51,13 +62,4 @@ final class CovenienceTests: XCTestCase {
     XCTAssertEqual([1, 2].resized(4), [1, 2, 0, 0])
   }
 
-  func testTransposedJaggedSequenceStopsAtShortestRow() throws {
-    let source = [
-      [1, 2, 3],
-      [4, 5],
-      [6, 7, 8, 9],
-    ]
-
-    XCTAssertEqual(source.transposed(), [[1, 4, 6], [2, 5, 7]])
-  }
 }

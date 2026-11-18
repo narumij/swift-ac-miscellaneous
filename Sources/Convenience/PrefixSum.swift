@@ -14,7 +14,7 @@ import Foundation
 @available(*, deprecated, renamed: "reductions", message: "swift-algorithmのreduction(0, +)を代わりにご使用ください。")
 @inlinable
 public func prefixSum<T>(N: Int, _ A: [T]) -> [T] where T: AdditiveArithmetic, T: ExpressibleByIntegerLiteral {
-  var s: [T] = [0] * (N + 1)
+  var s = [T](repeating: 0, count: N + 1)
   for i in 0..<N {
     s[i + 1] =
       s[i]
@@ -46,7 +46,7 @@ public func prefixSum<T>(_ A: [T]) -> [T] where T: AdditiveArithmetic, T: Expres
 /// evimaさんの解説を参考にしました
 @inlinable
 public func prefixSum<T>(N: Int, M: Int, _ A: [[T]]) -> [[T]] where T: AdditiveArithmetic, T: ExpressibleByIntegerLiteral {
-  var s: [[T]] = [0] * (N + 1, M + 1)
+  var s = [[T]](repeating: [T](repeating: 0, count: M + 1), count: N + 1)
   for i in 0..<N {
     for j in 0..<M {
       s[i + 1][j + 1] =
@@ -76,7 +76,7 @@ public func prefixSum<T>(_ A: [[T]]) -> [[T]] where T: AdditiveArithmetic, T: Ex
 /// evimaさんの解説を参考にしました
 @inlinable
 public func prefixSum<T>(N: Int, M: Int, L: Int, _ A: [[[T]]]) -> [[[T]]] where T: AdditiveArithmetic, T: ExpressibleByIntegerLiteral {
-  var s: [[[T]]] = [0] * (N + 1, M + 1, L + 1)
+  var s = [[[T]]](repeating: [[T]](repeating: [T](repeating: 0, count: L + 1), count: M + 1), count: N + 1)
   for i in 0..<N {
     for j in 0..<M {
       for k in 0..<L {

@@ -1,3 +1,4 @@
+// GLSL風記法が好きなため
 extension Sequence where Element == Bool {
   /// 全部真
   @inlinable
