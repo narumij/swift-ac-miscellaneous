@@ -1,7 +1,7 @@
-import Convenience
+import Recipes
 import XCTest
 
-final class CovenienceTests: XCTestCase {
+final class RecipesTests: XCTestCase {
 
   @available(macOS 26.0, iOS 26.0, tvOS 26.0, watchOS 26.0, visionOS 26.0, *)
   func testFactorialTable() {

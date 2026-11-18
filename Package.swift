@@ -8,11 +8,11 @@ let package = Package(
     .library(name: "AcMiscellaneous", targets: ["AcMiscellaneous"])
   ],
   targets: [
-    .target(name: "AcMiscellaneous"),
-    .target(name: "Convenience"),
+    .target(name: "AcMiscellaneous", dependencies: ["Idioms", "Sugar", "Recipes"]),
+    .target(name: "Recipes"),
     .target(name: "Idioms"),
     .target(name: "Sugar"),
-    .testTarget(name: "ConvenienceTests", dependencies: ["Convenience"]),
+    .testTarget(name: "RecipesTests", dependencies: ["Recipes"]),
     .testTarget(name: "SugarTests", dependencies: ["Sugar"]),
   ]
 )
