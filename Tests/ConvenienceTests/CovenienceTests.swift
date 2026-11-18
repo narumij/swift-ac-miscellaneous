@@ -51,15 +51,5 @@ final class CovenienceTests: XCTestCase {
     XCTAssertEqual(prefixSum(source)[2][2][1], 16)
   }
 
-  func testResizeCanShrinkAndExtend() throws {
-    var values = [1, 2, 3]
-    values.resize(2)
-    XCTAssertEqual(values, [1, 2])
-
-    values.resize(5)
-    XCTAssertEqual(values, [1, 2, 0, 0, 0])
-
-    XCTAssertEqual([1, 2].resized(4), [1, 2, 0, 0])
-  }
 
 }

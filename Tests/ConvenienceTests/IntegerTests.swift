@@ -1,4 +1,4 @@
-import Miscellaneous
+import Convenience
 import XCTest
 
 final class IntegerTests: XCTestCase {

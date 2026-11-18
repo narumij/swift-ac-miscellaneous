@@ -9,11 +9,9 @@ let package = Package(
   ],
   targets: [
     .target(name: "AcMiscellaneous"),
-    .target(name: "Miscellaneous"),
     .target(name: "Convenience"),
     .target(name: "Idioms"),
     .target(name: "Sugar"),
-    .testTarget(name: "MiscellaneousTests", dependencies: ["Miscellaneous"]),
     .testTarget(name: "ConvenienceTests", dependencies: ["Convenience"]),
     .testTarget(name: "SugarTests", dependencies: ["Sugar"]),
   ]
